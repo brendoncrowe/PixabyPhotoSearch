@@ -74,12 +74,8 @@
 				40B6F2D32993ECFD00D5ABAF /* Models */,
 				40B6F2D02993ECA900D5ABAF /* Persistence  */,
 				40B6F2CB2993EC6100D5ABAF /* NetworkServices */,
-				40B6F2B62993EBF200D5ABAF /* AppDelegate.swift */,
-				40B6F2B82993EBF200D5ABAF /* SceneDelegate.swift */,
-				40B6F2BA2993EBF200D5ABAF /* ViewController.swift */,
-				40B6F2BC2993EBF200D5ABAF /* Main.storyboard */,
-				40B6F2BF2993EBF300D5ABAF /* Assets.xcassets */,
-				40B6F2C12993EBF300D5ABAF /* LaunchScreen.storyboard */,
+				40B6F2DD2993EE5C00D5ABAF /* Supporting */,
+				40B6F2DE2993EE6500D5ABAF /* Controllers */,
 				40B6F2C42993EBF300D5ABAF /* Info.plist */,
 			);
 			path = PixabyPhotoSearch;
@@ -118,6 +114,26 @@
 				40B6F2D92993ED7F00D5ABAF /* UIImage.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		40B6F2DD2993EE5C00D5ABAF /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				40B6F2B62993EBF200D5ABAF /* AppDelegate.swift */,
+				40B6F2B82993EBF200D5ABAF /* SceneDelegate.swift */,
+				40B6F2BC2993EBF200D5ABAF /* Main.storyboard */,
+				40B6F2BF2993EBF300D5ABAF /* Assets.xcassets */,
+				40B6F2C12993EBF300D5ABAF /* LaunchScreen.storyboard */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		40B6F2DE2993EE6500D5ABAF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				40B6F2BA2993EBF200D5ABAF /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
