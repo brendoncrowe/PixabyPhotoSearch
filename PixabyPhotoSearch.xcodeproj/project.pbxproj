@@ -13,6 +13,12 @@
 		40B6F2BE2993EBF200D5ABAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B6F2BC2993EBF200D5ABAF /* Main.storyboard */; };
 		40B6F2C02993EBF300D5ABAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40B6F2BF2993EBF300D5ABAF /* Assets.xcassets */; };
 		40B6F2C32993EBF300D5ABAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 40B6F2C12993EBF300D5ABAF /* LaunchScreen.storyboard */; };
+		40B6F2CD2993EC6F00D5ABAF /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B6F2CC2993EC6F00D5ABAF /* NetworkHelper.swift */; };
+		40B6F2CF2993EC8E00D5ABAF /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B6F2CE2993EC8E00D5ABAF /* AppError.swift */; };
+		40B6F2D22993ECB600D5ABAF /* DataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B6F2D12993ECB600D5ABAF /* DataPersistence.swift */; };
+		40B6F2D52993ED0500D5ABAF /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B6F2D42993ED0500D5ABAF /* Photo.swift */; };
+		40B6F2D72993ED2200D5ABAF /* FileManager Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B6F2D62993ED2200D5ABAF /* FileManager Extension.swift */; };
+		40B6F2DA2993ED7F00D5ABAF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B6F2D92993ED7F00D5ABAF /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		40B6F2BF2993EBF300D5ABAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		40B6F2C22993EBF300D5ABAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		40B6F2C42993EBF300D5ABAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40B6F2CC2993EC6F00D5ABAF /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		40B6F2CE2993EC8E00D5ABAF /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		40B6F2D12993ECB600D5ABAF /* DataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistence.swift; sourceTree = "<group>"; };
+		40B6F2D42993ED0500D5ABAF /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		40B6F2D62993ED2200D5ABAF /* FileManager Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager Extension.swift"; sourceTree = "<group>"; };
+		40B6F2D92993ED7F00D5ABAF /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,10 @@
 		40B6F2B52993EBF200D5ABAF /* PixabyPhotoSearch */ = {
 			isa = PBXGroup;
 			children = (
+				40B6F2D82993ED7600D5ABAF /* Extensions */,
+				40B6F2D32993ECFD00D5ABAF /* Models */,
+				40B6F2D02993ECA900D5ABAF /* Persistence  */,
+				40B6F2CB2993EC6100D5ABAF /* NetworkServices */,
 				40B6F2B62993EBF200D5ABAF /* AppDelegate.swift */,
 				40B6F2B82993EBF200D5ABAF /* SceneDelegate.swift */,
 				40B6F2BA2993EBF200D5ABAF /* ViewController.swift */,
@@ -65,6 +81,40 @@
 				40B6F2C42993EBF300D5ABAF /* Info.plist */,
 			);
 			path = PixabyPhotoSearch;
+			sourceTree = "<group>";
+		};
+		40B6F2CB2993EC6100D5ABAF /* NetworkServices */ = {
+			isa = PBXGroup;
+			children = (
+				40B6F2CC2993EC6F00D5ABAF /* NetworkHelper.swift */,
+				40B6F2CE2993EC8E00D5ABAF /* AppError.swift */,
+			);
+			path = NetworkServices;
+			sourceTree = "<group>";
+		};
+		40B6F2D02993ECA900D5ABAF /* Persistence  */ = {
+			isa = PBXGroup;
+			children = (
+				40B6F2D12993ECB600D5ABAF /* DataPersistence.swift */,
+				40B6F2D62993ED2200D5ABAF /* FileManager Extension.swift */,
+			);
+			path = "Persistence ";
+			sourceTree = "<group>";
+		};
+		40B6F2D32993ECFD00D5ABAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				40B6F2D42993ED0500D5ABAF /* Photo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		40B6F2D82993ED7600D5ABAF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				40B6F2D92993ED7F00D5ABAF /* UIImage.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +188,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40B6F2D52993ED0500D5ABAF /* Photo.swift in Sources */,
+				40B6F2CD2993EC6F00D5ABAF /* NetworkHelper.swift in Sources */,
 				40B6F2BB2993EBF200D5ABAF /* ViewController.swift in Sources */,
+				40B6F2CF2993EC8E00D5ABAF /* AppError.swift in Sources */,
+				40B6F2D22993ECB600D5ABAF /* DataPersistence.swift in Sources */,
 				40B6F2B72993EBF200D5ABAF /* AppDelegate.swift in Sources */,
+				40B6F2DA2993ED7F00D5ABAF /* UIImage.swift in Sources */,
+				40B6F2D72993ED2200D5ABAF /* FileManager Extension.swift in Sources */,
 				40B6F2B92993EBF200D5ABAF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
