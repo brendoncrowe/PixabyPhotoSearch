@@ -30,13 +30,11 @@ struct PhotoApiClient {
                     let results = try JSONDecoder().decode(PhotoSearch.self, from: data)
                     let photos = results.hits
                     completion(.success(photos))
-                    
                 } catch {
                     // decoding error
                     completion(.failure(.decodingError(error)))
                 }
             }
         }
-        
     }
 }

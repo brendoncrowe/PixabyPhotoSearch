@@ -1,24 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rv8-sH-lZl">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Photo Search-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PixabyPhotoSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3DT-Ru-O0B">
+                                <rect key="frame" x="0.0" y="159" width="393" height="693"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Sw4-X0-uR8">
+                                    <size key="itemSize" width="200" height="136"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="Aem-Te-NZo" customClass="PhotoCell" customModule="PixabyPhotoSearch" customModuleProvider="target">
+                                        <rect key="frame" x="96.666666666666671" y="0.0" width="200" height="136"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="S6p-gS-Qxm">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="136"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bHs-Vz-GXl">
+                                                    <rect key="frame" x="0.0" y="1.6666666666666572" width="200" height="133"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bHs-Vz-GXl" firstAttribute="top" secondItem="S6p-gS-Qxm" secondAttribute="top" id="4vq-lY-ZY5"/>
+                                                <constraint firstAttribute="trailing" secondItem="bHs-Vz-GXl" secondAttribute="trailing" id="AUc-HV-nok"/>
+                                                <constraint firstAttribute="bottom" secondItem="bHs-Vz-GXl" secondAttribute="bottom" id="FBg-Mg-Cgj"/>
+                                                <constraint firstItem="bHs-Vz-GXl" firstAttribute="leading" secondItem="S6p-gS-Qxm" secondAttribute="leading" id="Vv4-4J-Jkp"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="200" height="136"/>
+                                        <connections>
+                                            <outlet property="photoImageView" destination="bHs-Vz-GXl" id="IHm-2q-Y3q"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ds1-QU-Ldz">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="e0s-6S-4XE"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ds1-QU-Ldz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="3aV-zZ-eiB"/>
+                            <constraint firstItem="ds1-QU-Ldz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CYR-Uh-dpE"/>
+                            <constraint firstItem="3DT-Ru-O0B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SHI-YP-2Vr"/>
+                            <constraint firstAttribute="bottom" secondItem="3DT-Ru-O0B" secondAttribute="bottom" id="bOT-BZ-e9z"/>
+                            <constraint firstItem="3DT-Ru-O0B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="njN-VH-bAt"/>
+                            <constraint firstItem="ds1-QU-Ldz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sN1-Uu-vOR"/>
+                            <constraint firstItem="3DT-Ru-O0B" firstAttribute="top" secondItem="ds1-QU-Ldz" secondAttribute="bottom" id="uRU-Og-n4B"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Photo Search" id="elX-fO-dH8"/>
+                    <connections>
+                        <outlet property="collectionView" destination="3DT-Ru-O0B" id="31P-vs-mz3"/>
+                        <outlet property="searchBar" destination="ds1-QU-Ldz" id="5hG-YL-WFq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1063.3587786259541" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="W0F-vP-zap">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rv8-sH-lZl" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="jR1-7g-Vuh">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6UQ-UM-ZbS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bE0-fF-7bl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.64122137404578" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -49,7 +49,7 @@ public class NetworkHelper {
   }
   
   /**
-   Perform the Network request for a givne URLRequest.
+   Perform the Network request for a given URLRequest.
 
    - Parameters:
       - request: The URLRequest to perform.
@@ -62,7 +62,7 @@ public class NetworkHelper {
     // check if cache should be cleared base on x days since last modified date of saved cache
     // retrieve cache date
     if let lastModifiedTimeInterval = UserDefaults.standard.object(forKey: CacheKey.lastModifiedDate) as? TimeInterval {
-      // if expired, clear cache (e.g max cache days is 3, difference in toay and lastModifiedDate is > 3 days
+      // if expired, clear cache (e.g max cache days is 3, difference in today and lastModifiedDate is > 3 days
       verifyCacheDate(for: lastModifiedTimeInterval, maxCacheDays: maxCacheDays)
     }
     
