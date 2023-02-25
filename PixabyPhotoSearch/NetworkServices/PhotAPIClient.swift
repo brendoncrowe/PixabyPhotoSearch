@@ -10,7 +10,7 @@ import Foundation
 struct PhotoApiClient {
     static func getPhotos(searchQuery: String, completion: @escaping (Result<[Photo], AppError>)-> ()) {
         
-        let endpoint = "https://pixabay.com/api/?key=33354910-2fec5a9935c10445b9f7d6f62&q=\(searchQuery)&per_page=60"
+        let endpoint = "https://pixabay.com/api/?key=33354910-2fec5a9935c10445b9f7d6f62&q=\(searchQuery)&per_page=30"
         
         guard let url = URL(string: endpoint) else {
             completion(.failure(.badURL(endpoint)))

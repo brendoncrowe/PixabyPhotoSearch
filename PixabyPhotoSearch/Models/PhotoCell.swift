@@ -24,5 +24,6 @@ class PhotoCell: UICollectionViewCell {
                 }
             }
         }
+        photoImageView.layer.cornerRadius = 16
     }
 }
