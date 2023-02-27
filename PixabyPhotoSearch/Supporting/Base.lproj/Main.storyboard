@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rv8-sH-lZl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vdu-8Y-Pdn">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -12,7 +12,7 @@
         <!--Photo Search-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PixabyPhotoSearch" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoSearchController" id="BYZ-38-t0r" customClass="PhotoSearchController" customModule="PixabyPhotoSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,15 +80,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1063.3587786259541" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="1288" y="125"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="LXY-Rf-L6C">
+            <objects>
+                <tabBarController id="Vdu-8Y-Pdn" customClass="TabBarController" customModule="PixabyPhotoSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i4Y-4F-edy">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Rv8-sH-lZl" kind="relationship" relationship="viewControllers" id="9mk-xr-QFC"/>
+                        <segue destination="soq-Ng-M7y" kind="relationship" relationship="viewControllers" id="wFW-2W-aEa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hk3-uZ-UOb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-671" y="650"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="W0F-vP-zap">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rv8-sH-lZl" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="PhotoSearchNavController" automaticallyAdjustsScrollViewInsets="NO" id="Rv8-sH-lZl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="K4s-pt-dBl"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="jR1-7g-Vuh">
-                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jR1-7g-Vuh">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -98,10 +117,46 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bE0-fF-7bl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.64122137404578" y="3.5211267605633805"/>
+            <point key="canvasLocation" x="360" y="125"/>
+        </scene>
+        <!--Favorites -->
+        <scene sceneID="9Cv-Wf-J6W">
+            <objects>
+                <navigationController storyboardIdentifier="FavoritesNavController" automaticallyAdjustsScrollViewInsets="NO" id="soq-Ng-M7y" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites " image="heart.fill" catalog="system" id="4nV-eo-UdA"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bmb-2Q-Mwp">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Azv-qm-mrn" kind="relationship" relationship="rootViewController" id="nj9-qj-BPI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D9s-in-HeU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359.5419847328244" y="974.64788732394368"/>
+        </scene>
+        <!--Favorites -->
+        <scene sceneID="w2d-UB-XJX">
+            <objects>
+                <viewController storyboardIdentifier="FavoritesController" id="Azv-qm-mrn" customClass="FavoritesController" customModule="PixabyPhotoSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mFS-4W-Yns">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4zM-XJ-rFa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorites " id="Eo2-UO-TAK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5r4-Li-QSn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1288" y="975"/>
         </scene>
     </scenes>
     <resources>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

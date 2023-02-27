@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct PhotoSearch:Codable {
+struct PhotoSearch: Codable & Equatable {
     let hits: [Photo]
 }
 
-struct Photo: Codable {
+struct Photo: Codable & Equatable {
     let largeImageURL: String
     let id: Int
     let user: String
