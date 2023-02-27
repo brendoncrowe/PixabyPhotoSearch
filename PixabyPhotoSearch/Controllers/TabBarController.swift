@@ -22,7 +22,6 @@ private let dataPersistence = DataPersistence<Photo>(filename: "photos.plist")
         guard let navController = storyboard?.instantiateViewController(withIdentifier: "FavoritesNavController") as? UINavigationController, let favoritesPhotoController = navController.viewControllers.first as? FavoritesController else {
             fatalError("Could not load FavoritesNavController ")
         }
-        favoritesPhotoController.dataPersistence = dataPersistence
         return navController
     }()
     

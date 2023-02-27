@@ -20,7 +20,7 @@ public protocol DataPersistenceDelegate: AnyObject {
   func didDeleteItem<T: Codable>(_ persistenceHelper: DataPersistence<T>, item: T)
 }
 
-public typealias Writeable = Codable & Equatable
+public typealias Writeable = Codable & Equatable // way to customize Type names
 
 public final class DataPersistence<T: Writeable> {
   
@@ -35,7 +35,7 @@ public final class DataPersistence<T: Writeable> {
     self.items = []
   }
   
-  private func saveItemsToDocumentsDirectory() throws {
+  private func saveItemsToDocumentsDirectory() throws { // helper function for other persistence functions
     do {
       let url = FileManager.getPath(with: filename, for: .documentsDirectory)
       let data = try PropertyListEncoder().encode(items)

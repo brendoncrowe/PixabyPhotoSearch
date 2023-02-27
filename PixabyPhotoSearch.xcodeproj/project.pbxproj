@@ -10,6 +10,7 @@
 		4015F95A29A6C1CF00D3DE83 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4015F95929A6C1CF00D3DE83 /* PhotoCell.swift */; };
 		4015F95C29AC38F300D3DE83 /* FavoritesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4015F95B29AC38F300D3DE83 /* FavoritesController.swift */; };
 		4015F96029AC398900D3DE83 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4015F95F29AC398900D3DE83 /* TabBarController.swift */; };
+		4015F96229AD392B00D3DE83 /* PhotoDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4015F96129AD392B00D3DE83 /* PhotoDetailController.swift */; };
 		40B6F2B72993EBF200D5ABAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B6F2B62993EBF200D5ABAF /* AppDelegate.swift */; };
 		40B6F2B92993EBF200D5ABAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B6F2B82993EBF200D5ABAF /* SceneDelegate.swift */; };
 		40B6F2BB2993EBF200D5ABAF /* PhotoSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B6F2BA2993EBF200D5ABAF /* PhotoSearchController.swift */; };
@@ -29,6 +30,7 @@
 		4015F95929A6C1CF00D3DE83 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		4015F95B29AC38F300D3DE83 /* FavoritesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesController.swift; sourceTree = "<group>"; };
 		4015F95F29AC398900D3DE83 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		4015F96129AD392B00D3DE83 /* PhotoDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailController.swift; sourceTree = "<group>"; };
 		40B6F2B32993EBF200D5ABAF /* PixabyPhotoSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PixabyPhotoSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40B6F2B62993EBF200D5ABAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40B6F2B82993EBF200D5ABAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,8 +131,8 @@
 				40B6F2B62993EBF200D5ABAF /* AppDelegate.swift */,
 				40B6F2B82993EBF200D5ABAF /* SceneDelegate.swift */,
 				40B6F2BC2993EBF200D5ABAF /* Main.storyboard */,
-				40B6F2BF2993EBF300D5ABAF /* Assets.xcassets */,
 				40B6F2C12993EBF300D5ABAF /* LaunchScreen.storyboard */,
+				40B6F2BF2993EBF300D5ABAF /* Assets.xcassets */,
 			);
 			path = Supporting;
 			sourceTree = "<group>";
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				40B6F2BA2993EBF200D5ABAF /* PhotoSearchController.swift */,
+				4015F96129AD392B00D3DE83 /* PhotoDetailController.swift */,
 				4015F95F29AC398900D3DE83 /* TabBarController.swift */,
 				4015F95B29AC38F300D3DE83 /* FavoritesController.swift */,
 			);
@@ -229,6 +232,7 @@
 				4015F96029AC398900D3DE83 /* TabBarController.swift in Sources */,
 				40B6F2B92993EBF200D5ABAF /* SceneDelegate.swift in Sources */,
 				4015F95C29AC38F300D3DE83 /* FavoritesController.swift in Sources */,
+				4015F96229AD392B00D3DE83 /* PhotoDetailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
