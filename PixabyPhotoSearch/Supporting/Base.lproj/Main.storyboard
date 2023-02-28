@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vdu-8Y-Pdn">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController storyboardIdentifier="PhotoSearchController" id="BYZ-38-t0r" customClass="PhotoSearchController" customModule="PixabyPhotoSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="3DT-Ru-O0B">
-                                <rect key="frame" x="0.0" y="100" width="320" height="468"/>
+                                <rect key="frame" x="0.0" y="159" width="393" height="693"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Sw4-X0-uR8">
                                     <size key="itemSize" width="200" height="136"/>
@@ -28,14 +28,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="Aem-Te-NZo" customClass="PhotoCell" customModule="PixabyPhotoSearch" customModuleProvider="target">
-                                        <rect key="frame" x="60" y="0.0" width="200" height="136"/>
+                                        <rect key="frame" x="96.666666666666671" y="0.0" width="200" height="136"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="S6p-gS-Qxm">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="136"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bHs-Vz-GXl">
-                                                    <rect key="frame" x="0.0" y="1" width="200" height="133.5"/>
+                                                    <rect key="frame" x="0.0" y="1.6666666666666572" width="200" height="133"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -54,7 +54,7 @@
                                 </cells>
                             </collectionView>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ds1-QU-Ldz">
-                                <rect key="frame" x="0.0" y="44" width="320" height="56"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="e0s-6S-4XE"/>
@@ -88,20 +88,69 @@
             <objects>
                 <viewController id="X5Y-gE-7tQ" customClass="PhotoDetailController" customModule="PixabyPhotoSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XqO-dO-3et">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exclamationmark.triangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LVR-0P-feT">
-                                <rect key="frame" x="16" y="57" width="288" height="217"/>
+                                <rect key="frame" x="16" y="57.333333333333314" width="361" height="311"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User: Bman_22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOC-oA-eOc">
+                                <rect key="frame" x="20" y="409.33333333333331" width="357" height="28.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AgM-4M-5IC">
+                                <rect key="frame" x="16" y="458" width="182.66666666666666" height="48"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="eye" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="fjQ-lR-NgF">
+                                        <rect key="frame" x="0.0" y="2.3333333333333321" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="F0a-4r-6ED"/>
+                                            <constraint firstAttribute="height" constant="48" id="ffP-Gw-6Yn"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Views" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7W-Zh-MEP">
+                                        <rect key="frame" x="52" y="0.0" width="130.66666666666666" height="48"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xHi-gm-QCk">
+                                <rect key="frame" x="16" y="514" width="176.66666666666666" height="45.333333333333371"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aOJ-eQ-FTG">
+                                        <rect key="frame" x="0.0" y="0.99999999999999645" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="Wuf-sN-Cos"/>
+                                            <constraint firstAttribute="height" constant="45.329999999999998" id="wXD-Mu-bI7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Likes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBJ-en-0Rn">
+                                        <rect key="frame" x="52.000000000000007" y="0.0" width="124.66666666666669" height="45.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="l20-R8-QfE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="QOC-oA-eOc" firstAttribute="leading" secondItem="l20-R8-QfE" secondAttribute="leading" constant="20" id="0Ul-oK-7Zk"/>
                             <constraint firstItem="LVR-0P-feT" firstAttribute="top" secondItem="l20-R8-QfE" secondAttribute="top" id="2V9-fJ-rCj"/>
+                            <constraint firstItem="AgM-4M-5IC" firstAttribute="top" secondItem="QOC-oA-eOc" secondAttribute="bottom" constant="20" id="5U8-Of-eKh"/>
                             <constraint firstItem="l20-R8-QfE" firstAttribute="trailing" secondItem="LVR-0P-feT" secondAttribute="trailing" constant="16" id="Nxd-Wg-mu3"/>
                             <constraint firstItem="LVR-0P-feT" firstAttribute="height" secondItem="XqO-dO-3et" secondAttribute="height" multiplier="0.4" id="VEL-Zy-FFk"/>
+                            <constraint firstItem="AgM-4M-5IC" firstAttribute="leading" secondItem="l20-R8-QfE" secondAttribute="leading" constant="16" id="afi-7G-V5c"/>
+                            <constraint firstItem="xHi-gm-QCk" firstAttribute="top" secondItem="AgM-4M-5IC" secondAttribute="bottom" constant="8" id="fHC-Oo-U8J"/>
                             <constraint firstItem="LVR-0P-feT" firstAttribute="leading" secondItem="l20-R8-QfE" secondAttribute="leading" constant="16" id="h5S-yr-m0n"/>
+                            <constraint firstItem="xHi-gm-QCk" firstAttribute="leading" secondItem="l20-R8-QfE" secondAttribute="leading" constant="16" id="lQ2-iT-rRY"/>
+                            <constraint firstItem="QOC-oA-eOc" firstAttribute="top" secondItem="LVR-0P-feT" secondAttribute="bottom" constant="40" id="npw-y0-6B7"/>
+                            <constraint firstItem="l20-R8-QfE" firstAttribute="trailing" secondItem="QOC-oA-eOc" secondAttribute="trailing" constant="16" id="ybK-aA-oWX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Jlp-nk-4Mf">
@@ -110,7 +159,18 @@
                                 <action selector="dismissView:" destination="X5Y-gE-7tQ" id="nOr-2e-pQG"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="osE-wP-3uo">
+                            <connections>
+                                <action selector="savePhotoButtonPressed:" destination="X5Y-gE-7tQ" id="3Ja-N6-lgI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="numberOfLikesLabel" destination="JBJ-en-0Rn" id="Ale-Fg-Xz1"/>
+                        <outlet property="numberOfViewsLabel" destination="W7W-Zh-MEP" id="uE6-zE-Wzt"/>
+                        <outlet property="photoImageView" destination="LVR-0P-feT" id="lu0-2c-Ee6"/>
+                        <outlet property="userIDLabel" destination="QOC-oA-eOc" id="V4K-sk-ho8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="74J-wf-WYw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,7 +201,7 @@
                     <tabBarItem key="tabBarItem" systemItem="search" id="K4s-pt-dBl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jR1-7g-Vuh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -160,7 +220,7 @@
                     <tabBarItem key="tabBarItem" title="Favorites " image="heart.fill" catalog="system" id="4nV-eo-UdA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bmb-2Q-Mwp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -177,11 +237,11 @@
             <objects>
                 <viewController storyboardIdentifier="FavoritesController" id="Azv-qm-mrn" customClass="FavoritesController" customModule="PixabyPhotoSearch" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mFS-4W-Yns">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="h7Y-VA-cAa">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1mi-ho-wH8">
                                     <size key="itemSize" width="195" height="127"/>
@@ -190,8 +250,8 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Dcj-0P-QpK">
-                                        <rect key="frame" x="62.5" y="0.0" width="195" height="127"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="Dcj-0P-QpK">
+                                        <rect key="frame" x="99" y="0.0" width="195" height="127"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fAy-Fk-kzy">
                                             <rect key="frame" x="0.0" y="0.0" width="195" height="127"/>
@@ -237,7 +297,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bGc-Ih-sOS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="47p-wk-RzB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -255,6 +315,8 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="exclamationmark.triangle" catalog="system" width="128" height="109"/>
+        <image name="eye" catalog="system" width="128" height="79"/>
+        <image name="heart.circle" catalog="system" width="128" height="123"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="photo.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">

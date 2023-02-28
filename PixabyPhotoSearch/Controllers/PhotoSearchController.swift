@@ -43,6 +43,16 @@ class PhotoSearchController: UIViewController {
             }
         }
     }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navController = segue.destination as? UINavigationController, let photoDetailVC = navController.viewControllers.first as? PhotoDetailController, let cell = sender as? UICollectionViewCell, let indexPath = collectionView.indexPath(for: cell) else {
+            fatalError("could not segue PhotoDetailController")
+        }
+        photoDetailVC.photo = photos[indexPath.row]
+
+    }
 }
 
 extension PhotoSearchController: UICollectionViewDataSource {
