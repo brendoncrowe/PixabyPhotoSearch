@@ -15,6 +15,8 @@ class PhotoDetailController: UIViewController {
     @IBOutlet weak var numberOfViewsLabel: UILabel!
     @IBOutlet weak var numberOfLikesLabel: UILabel!
     
+    var dataPersistence = DataPersistence<Photo>(filename: "photos.plist")
+    
     
     var photo: Photo?
     
@@ -51,7 +53,16 @@ class PhotoDetailController: UIViewController {
         alertController.addAction(UIAlertAction(title: "OK", style: .default))
         present(alertController, animated: true)
         
+        //TODO: When save button is pressed, add photo to favorites
         
+        do {
+            if let photo = photo {
+                try dataPersistence.createItem(photo)
+                print("photo was successfully saved")
+            }
+        } catch {
+            print("Error saving photo: \(error)")
+        }
     }
     
     
