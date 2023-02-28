@@ -15,6 +15,7 @@ class PhotoDetailController: UIViewController {
     @IBOutlet weak var numberOfViewsLabel: UILabel!
     @IBOutlet weak var numberOfLikesLabel: UILabel!
     
+    
     var photo: Photo?
     
     override func viewDidLoad() {
@@ -45,6 +46,12 @@ class PhotoDetailController: UIViewController {
     
     
     @IBAction func savePhotoButtonPressed(_ sender: UIBarButtonItem) {
+        
+        let alertController = UIAlertController(title: "Saved", message: "The photo was saved to your favorites", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alertController, animated: true)
+        
+        
     }
     
     
@@ -52,5 +59,5 @@ class PhotoDetailController: UIViewController {
         dismiss(animated: true)
     }
     
-
+    
 }
